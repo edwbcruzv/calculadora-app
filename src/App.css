@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(46, 120, 170),
+    rgb(163, 92, 148)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* estilos de la etiqueda body */
+body {
+  padding-top: 50px;
+  user-select: none;
+}
+/* se esta ajustando el contenedor de la app en general */
+.react-calculator {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  background-color: rgb(66, 66, 66);
+  box-shadow: 0 19px 38px rgba(19, 19, 19, 0.205),
+    0 15px 12px rgba(19, 19, 19, 0.123);
+}
+/* se estan dando estilos generales a todos los botones que existen */
+button {
+  outline: none;
+  border: 0;
+  padding: 16px;
+  font-size: 30px;
+  line-height: 1;
+  background-color: transparent;
+  color: #ffce5c;
+  transition: all 300ms;
+  border: 1px solid #0001;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+  color: #00a3f5;
+  border: 1px solid #ffce5c22;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* definiendo estilos del contenedor 'result' */
+.result {
+  position: relative;
+  width: 320px;
+  height: 80px;
+  padding: 8px;
+  overflow: hidden;
+  background-color: rgba(19, 19, 19, 0.64);
+  font-size: 32px;
+  line-height: 2;
+  color: #60d63c;
+  text-align: right;
+  direction: rtl;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+/* poniendo colores exclusivamente a los botones que estan en 
+  los contenedores 'functions' y 'math-operations' */
+.functions button,
+.math-operations button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  color: #d63c6b;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.functions button:hover,
+.math-operations button:hover {
+  color: #b696a0;
 }
 
-.App-link {
-  color: #61dafb;
+/* ajusta el tamanio del contenedor div  */
+.numbers {
+  width: 240px;
+  float: left;
+}
+/* ajusta el tamanio a los botones del 1 al 9 automaticamente */
+.numbers button {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+/* ajusta el tamanio del boton 0 automaticamente por ser el ultimo */
+.numbers button:last-child {
+  width: 100%;
+}
+/* ajusta los mamanios de los botones dentro del contenedor div */
+.functions {
+  float: left;
+  width: 240px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-long-text {
+  font-size: 18px;
 }
