@@ -23,7 +23,7 @@ const App=()=>{ //funcion flecha o arrow function
 
     const items=words(stack,/[^-^+^*^/]+/g)
     console.log("Render de App",items) // puebas de funcionamiento en consola
-    consta value= items.length >0 ? 
+    //consta value= items.length >0 ? 
 
     //funcion llamada por el componente Numbers
     const OnClickNumberFunction=(text)=>{
